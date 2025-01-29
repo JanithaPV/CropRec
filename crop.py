@@ -7,7 +7,7 @@ import numpy as np
 st.title("Crop Recommendation App")
 
 # Load Model
-file_path = os.path.join("nb_model.pkl")
+file_path = os.path.join("model", "nb_model.pkl")
 
 # Check if directory exists
 if not os.path.exists("model"):
