@@ -16,7 +16,7 @@ with open(path.join(file_name),'rb')as f:
     tp = st.number_input("Temperature (°C)", min_value=0, max_value=600)
     ht = st.number_input("Humidity (%)", min_value=0, max_value=700)
     ph = st.number_input("pH", min_value=0.0, max_value=40.0, step=0.1)  # Fixed pH input
-    rf = st.number_input("Rainfall (mm)", min_value=0, max_value=250)
+    rf = st.number_input("Rainfall (mm)", min_value=0, max_value=1250)
 
 
     if st.button("Recommend"):
