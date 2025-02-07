@@ -9,13 +9,14 @@ file_name="nb_model.pkl"
 with open(path.join(file_name),'rb')as f:
     nb_model=pickle.load(f)
 
-    nv = st.number_input("Nitrogen (kg/ha)", min_value=1, max_value=100)
-    phv = st.number_input("Phosphorus (kg/ha)", min_value=30, max_value=100)
-    pv = st.number_input("Potassium (kg/ha)", min_value=10, max_value=50)
-    tp = st.number_input("Temperature (°C)", min_value=10, max_value=50)
-    ht = st.number_input("Humidity (%)", min_value=15, max_value=100)
-    ph = st.number_input("pH", min_value=0.0, max_value=14.0, step=0.1)  # Fixed pH input
-    rf = st.number_input("Rainfall (mm)", min_value=50, max_value=250)
+    nv = st.number_input("Nitrogen (kg/ha)", min_value=0, max_value=900)
+    
+    phv = st.number_input("Phosphorus (kg/ha)", min_value=0, max_value=700)
+    pv = st.number_input("Potassium (kg/ha)", min_value=0, max_value=500)
+    tp = st.number_input("Temperature (°C)", min_value=0, max_value=600)
+    ht = st.number_input("Humidity (%)", min_value=0, max_value=700)
+    ph = st.number_input("pH", min_value=0.0, max_value=40.0, step=0.1)  # Fixed pH input
+    rf = st.number_input("Rainfall (mm)", min_value=0, max_value=250)
 
 
     if st.button("Recommend"):
