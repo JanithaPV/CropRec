@@ -13,10 +13,10 @@ with open(path.join(file_name),'rb')as f:
     
     phv = st.number_input("Phosphorus (kg/ha)", min_value=0, max_value=700)
     pv = st.number_input("Potassium (kg/ha)", min_value=0, max_value=500)
-    tp = st.number_input("Temperature (°C)", min_value=0.0, max_value=600.0)
-    ht = st.number_input("Humidity (%)", min_value=0.0, max_value=700.0)
-    ph = st.number_input("pH", min_value=0.0, max_value=100.0, step=0.1)  # Fixed pH input
-    rf = st.number_input("Rainfall (mm)", min_value=0.0, max_value=1250.0)
+    tp = st.number_input("Temperature (°C)", min_value=0, max_value=600)
+    ht = st.number_input("Humidity (%)", min_value=0, max_value=700)
+    ph = st.number_input("pH", min_value=0.0, max_value=40.0, step=0.1)  # Fixed pH input
+    rf = st.number_input("Rainfall (mm)", min_value=0, max_value=1250)
 
 
     if st.button("Recommend"):
